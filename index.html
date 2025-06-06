@@ -59,7 +59,7 @@
     /* Quest & Dialogue Box */
     #dialogueBox {
       position: absolute;
-      bottom: 20%;
+      top: 10%;
       left: 50%;
       transform: translateX(-50%);
       width: 60%;
@@ -204,9 +204,9 @@
     { name: "Temple", x: 1500, y: 1200, width: 80, height: 80, color: '#FFD700' },
     { name: "Temple", x: 1800, y: 500, width: 80, height: 80, color: '#FFD700' },
     // Markets (tomato red) — one is the Quest Hub
-    { name: "Market", x: 1200, y: 800, width: 120, height: 80, color: '#FF6347', isQuestHub: true },
-    { name: "Market", x: 600, y: 1700, width: 120, height: 80, color: '#FF6347' },
-    { name: "Market", x: 300, y: 1300, width: 120, height: 80, color: '#FF6347' },
+    { name: "Market", x: 1200, y: 800, width: 120, height: 80, color: 'blue', isQuestHub: true },
+    { name: "Market", x: 600, y: 1700, width: 120, height: 80, color: 'blue' },
+    { name: "Market", x: 300, y: 1300, width: 120, height: 80, color: 'blue' },
     // Schools (sky blue)
     { name: "School", x: 700, y: 1500, width: 100, height: 100, color: '#87CEEB' },
     { name: "School", x: 1400, y: 400, width: 100, height: 100, color: '#87CEEB' },
@@ -241,9 +241,9 @@
   }
 
   // --- Food (Hunger) Setup ---
-  const foodRadius = 10;
+  const foodRadius = 20;
   const foods = [];
-  const totalFood = 20;
+  const totalFood = 5;
 
   for (let i = 0; i < totalFood; i++) {
     let x, y, attempts = 0;
@@ -732,7 +732,7 @@ document.addEventListener('keydown', e => {
     for (const f of foods) {
       const mx = minimapX + f.x * miniScaleX;
       const my = minimapY + f.y * miniScaleY;
-      ctx.fillStyle = 'orange';
+      ctx.fillStyle = 'black';
       ctx.beginPath();
       ctx.arc(mx, my, 2, 0, Math.PI * 2);
       ctx.fill();
