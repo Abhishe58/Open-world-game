@@ -790,6 +790,13 @@ document.addEventListener('keydown', e => {
     requestAnimationFrame(gameLoop);
   }
 
+  function checkOrientation() {
+    if (window.innerHeight > window.innerWidth) {
+      document.getElementById('rotateOverlay').style.visibility = 'visible';
+    } else {
+      document.getElementById('rotateOverlay').style.visibility = 'visible';
+    }
+  }
   
   window.addEventListener('resize', checkOrientation);
   window.addEventListener('orientationchange', checkOrientation);
